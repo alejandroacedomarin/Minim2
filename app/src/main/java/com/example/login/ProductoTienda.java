@@ -75,7 +75,7 @@ public class ProductoTienda extends AppCompatActivity {
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.addInterceptor(loggin);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://147.83.7.205:80/")
+                .baseUrl("http://10.0.2.2:8080/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
                 .build();
@@ -120,7 +120,7 @@ public class ProductoTienda extends AppCompatActivity {
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
             httpClient.addInterceptor(loggin);
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("http://147.83.7.205:80/")
+                    .baseUrl("http://10.0.2.2:8080/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(httpClient.build())
                     .build();
