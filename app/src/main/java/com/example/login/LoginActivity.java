@@ -77,6 +77,9 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     Context context=LoginActivity.this;
                     SessionManager.loginUser(context,usrname);
+                    Bundle miBundle2=new Bundle();
+
+                    miBundle2.putString("username",usrname);
                     Toast.makeText(LoginActivity.this, "Submitted Successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent=new Intent(context, MainMenu.class);

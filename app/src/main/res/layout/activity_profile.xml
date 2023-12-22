@@ -23,8 +23,8 @@
         android:id="@+id/onChangeUser"
         android:layout_width="178dp"
         android:layout_height="50dp"
-        android:text="Cambiar usuario"
         android:onClick="onChangeUser"
+        android:text="Cambiar usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.435"
@@ -87,4 +87,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.694" />
+
+    <Button
+        android:id="@+id/badgets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickBadges"
+        android:text="Insignias"
+        app:layout_constraintBottom_toTopOf="@+id/onChangeUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

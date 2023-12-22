@@ -1,5 +1,8 @@
 package com.example.login.ModelosDeClases;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Jugador {
     String username;
     String password;
