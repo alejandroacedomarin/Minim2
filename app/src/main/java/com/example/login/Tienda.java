@@ -93,6 +93,7 @@ public class Tienda extends AppCompatActivity {
         String username = SessionManager.getLoggedUsername(this);
         GetJugador jugador = retrofit.create(GetJugador.class);
         Call<Jugador> call2 = jugador.getJugador(username);
+        Log.i("ESO", "User:"+SessionManager.getLoggedUsername(this));
         call2.enqueue(new Callback<Jugador>() {
             @Override
             public void onResponse(Call<Jugador> call, Response<Jugador> response) {

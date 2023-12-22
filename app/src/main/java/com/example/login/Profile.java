@@ -49,7 +49,7 @@ public class Profile extends AppCompatActivity {
         );
     }
     public void onClickBadges(View view){
-        SessionManager.logOutUser(this);
+
         Intent intent=new Intent(this, InsigniasActivity.class);
         startActivity(intent);
         finish();

@@ -38,7 +38,7 @@ public class InsigniasActivity extends AppCompatActivity {
         recyclerProd=(RecyclerView) findViewById(R.id.recyclerView);
         recyclerProd.setLayoutManager(new LinearLayoutManager(this));
 
-
+        Log.i("Badges", "User:"+SessionManager.getLoggedUsername(this));
         HttpLoggingInterceptor loggin = new HttpLoggingInterceptor();
         loggin.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
@@ -49,7 +49,8 @@ public class InsigniasActivity extends AppCompatActivity {
                 .client(httpClient.build())
                 .build();
         InsigniasService badges = retrofit.create(InsigniasService.class);
-        Call<ArrayList<Badges>> call = badges.getInsignias(SessionManager.getLoggedUsername(this));        call.enqueue(new Callback<ArrayList<Badges>>() {
+        Call<ArrayList<Badges>> call = badges.getInsignias(SessionManager.getLoggedUsername(this));
+        call.enqueue(new Callback<ArrayList<Badges>>() {
             @Override
             public void onResponse(Call<ArrayList<Badges>> call, Response<ArrayList<Badges>> response) {
                 if (response.isSuccessful()){
